@@ -1,0 +1,1829 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8fc;
+    color: #172033;
+    line-height: 1.6;
+}
+
+/* Navbar */
+
+.navbar {
+    width: 100%;
+    padding: 18px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    border-bottom: 1px solid #e5e9f0;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #172033;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #1769e0;
+}
+
+
+/* Hero */
+
+.hero {
+    min-height: 520px;
+    padding: 80px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    background: linear-gradient(135deg, #eef6ff, #ffffff);
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.badge {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #dcecff;
+    color: #1769e0;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: #1769e0;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #596579;
+    max-width: 580px;
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 23px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.primary-btn {
+    background: #1769e0;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #0e55bb;
+}
+
+.secondary-btn {
+    background: white;
+    color: #1769e0;
+    border: 1px solid #1769e0;
+}
+
+
+/* Hero Card */
+
+.hero-card {
+    width: 300px;
+    padding: 45px 30px;
+    text-align: center;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.shield-icon {
+    font-size: 70px;
+    margin-bottom: 15px;
+}
+
+.hero-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    color: #687386;
+}
+
+
+/* Features */
+
+.features-section {
+    padding: 80px 7%;
+    background: white;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 650px;
+    margin: auto;
+}
+
+.section-heading span {
+    color: #1769e0;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.section-heading h2 {
+    font-size: 36px;
+    margin: 10px 0;
+}
+
+.section-heading p {
+    color: #687386;
+}
+
+.features-grid {
+    margin-top: 45px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+    background: #f8fafc;
+    border: 1px solid #e6ebf2;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.feature-icon {
+    font-size: 38px;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #687386;
+    margin-bottom: 18px;
+}
+
+.feature-card a {
+    text-decoration: none;
+    color: #1769e0;
+    font-weight: bold;
+}
+
+
+/* Scam Alert */
+
+.alert-section {
+    padding: 60px 7%;
+}
+
+.alert-content {
+    padding: 45px;
+    border-radius: 18px;
+    background: #fff5e8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.alert-label {
+    color: #d66a00;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.alert-content h2 {
+    font-size: 30px;
+    margin: 10px 0;
+}
+
+.alert-content p {
+    color: #687386;
+    max-width: 650px;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 40px 7%;
+    text-align: center;
+    background: #111827;
+    color: white;
+}
+
+.footer-logo {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+footer p {
+    color: #b7c0cf;
+}
+
+.copyright {
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .alert-content {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+}
+/* =========================
+   ASK EXPERT PAGE
+   ========================= */
+
+.page-header {
+    text-align: center;
+    padding: 70px 7% 50px;
+    background: linear-gradient(135deg, #eef6ff, #ffffff);
+}
+
+.page-header h1 {
+    font-size: 42px;
+    margin: 15px 0;
+}
+
+.page-header p {
+    max-width: 700px;
+    margin: auto;
+    color: #687386;
+    font-size: 17px;
+}
+
+
+/* ASK SECTION */
+
+.ask-section {
+    padding: 70px 7%;
+    background: #f5f8fc;
+}
+
+.ask-container {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 40px;
+    align-items: start;
+}
+
+
+/* LEFT INFORMATION */
+
+.ask-info {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e9f0;
+}
+
+.ask-info h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.ask-info p {
+    color: #687386;
+    margin-bottom: 25px;
+}
+
+.help-point {
+    margin-top: 15px;
+    color: #374151;
+    font-size: 15px;
+}
+
+
+/* FORM */
+
+.question-form {
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    border: 1px solid #e5e9f0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.question-form h2 {
+    font-size: 27px;
+    margin-bottom: 25px;
+}
+
+.question-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.question-form label {
+    margin-bottom: 7px;
+    margin-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.question-form input,
+.question-form select,
+.question-form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d7dde7;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+}
+
+.question-form input:focus,
+.question-form select:focus,
+.question-form textarea:focus {
+    border-color: #1769e0;
+}
+
+.question-form textarea {
+    resize: vertical;
+    min-height: 130px;
+}
+
+.question-form button {
+    border: none;
+    cursor: pointer;
+    margin-top: 25px;
+    font-size: 15px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+
+    .ask-container {
+        grid-template-columns: 1fr;
+    }
+
+    .page-header h1 {
+        font-size: 34px;
+    }
+
+    .ask-info,
+    .question-form {
+        padding: 28px;
+    }
+}
+/* ============================= */
+/* MY QUERY PAGE */
+/* ============================= */
+
+.page-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.page-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.page-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.query-search-card {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+}
+
+.query-search-card label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.query-search-card input {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    margin-bottom: 18px;
+    font-size: 15px;
+    box-sizing: border-box;
+}
+
+.query-search-card input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.results-section h2 {
+    margin-bottom: 20px;
+}
+
+.query-card {
+    background: #fff;
+    border-radius: 16px;
+    margin-bottom: 22px;
+    padding: 25px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+}
+
+.query-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.query-card-header h3 {
+    margin: 0;
+}
+
+.status-badge {
+    padding: 7px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.status-badge.answered {
+    background: #dcfce7;
+    color: #166534;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.question-text {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 10px;
+    line-height: 1.6;
+}
+
+.expert-response {
+    margin-top: 20px;
+    padding: 20px;
+    border-left: 4px solid #2563eb;
+    background: #eff6ff;
+    border-radius: 10px;
+}
+
+.expert-response h4 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.expert-response p {
+    line-height: 1.7;
+}
+
+.waiting-message {
+    margin-top: 20px;
+    padding: 15px;
+    background: #fff7ed;
+    border-radius: 10px;
+    color: #9a3412;
+}
+
+.query-card small {
+    display: block;
+    margin-top: 18px;
+    color: #777;
+}
+
+.no-query {
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 30px;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 25px rgba(0,0,0,0.07);
+}
+
+.footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    color: #666;
+}
+/* ============================= */
+/* ADMIN PANEL */
+/* ============================= */
+
+.admin-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 55px 20px;
+}
+
+.admin-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.admin-header h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+}
+
+.admin-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.admin-query-card {
+    background: #fff;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 16px;
+    box-shadow: 0 7px 28px rgba(0,0,0,0.08);
+}
+
+.admin-query-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding-bottom: 18px;
+    border-bottom: 1px solid #eee;
+}
+
+.admin-query-top h3 {
+    margin: 0 0 5px;
+}
+
+.admin-id {
+    color: #777;
+    font-size: 13px;
+}
+
+.admin-details {
+    padding: 20px 0;
+}
+
+.admin-details p {
+    line-height: 1.6;
+}
+
+.admin-question {
+    background: #f8fafc;
+    padding: 16px;
+    border-radius: 10px;
+    line-height: 1.7;
+}
+
+.answer-form {
+    margin-top: 10px;
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+}
+
+.answer-form label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.answer-form textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    resize: vertical;
+    font-family: inherit;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.answer-form textarea:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.existing-answer {
+    margin-top: 10px;
+    padding: 20px;
+    background: #eff6ff;
+    border-left: 4px solid #2563eb;
+    border-radius: 10px;
+}
+
+.existing-answer h4 {
+    margin-top: 0;
+}
+
+.existing-answer p {
+    line-height: 1.7;
+}
+
+.query-date {
+    display: block;
+    margin-top: 18px;
+    color: #777;
+}
+
+.empty-admin {
+    text-align: center;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 7px 28px rgba(0,0,0,0.08);
+}
+/* ============================= */
+/* SCAM ALERTS */
+/* ============================= */
+
+.scam-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.scam-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.alert-label {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.scam-header h1 {
+    font-size: 40px;
+    margin: 5px 0 12px;
+}
+
+.scam-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.scam-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.scam-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scam-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+}
+
+.scam-icon {
+    font-size: 35px;
+    margin-bottom: 12px;
+}
+
+.scam-tag {
+    font-size: 11px;
+    font-weight: 700;
+    color: #b91c1c;
+    letter-spacing: 0.5px;
+}
+
+.scam-card h3 {
+    margin: 10px 0;
+    font-size: 21px;
+}
+
+.scam-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.scam-example {
+    margin-top: 18px;
+    padding: 14px;
+    background: #f8fafc;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.safety-tip {
+    margin-top: 15px;
+    padding: 14px;
+    background: #ecfdf5;
+    color: #166534;
+    border-radius: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.scam-bottom {
+    margin-top: 45px;
+    padding: 35px;
+    text-align: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.scam-bottom h2 {
+    margin-top: 0;
+}
+
+.scam-bottom p {
+    max-width: 700px;
+    margin: 10px auto 22px;
+    color: #666;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .scam-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .scam-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .scam-header h1 {
+        font-size: 32px;
+    }
+}
+/* ============================= */
+/* KNOWLEDGE BASE */
+/* ============================= */
+
+.knowledge-section {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.knowledge-header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.knowledge-label {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.knowledge-header h1 {
+    font-size: 40px;
+    margin: 14px 0 10px;
+}
+
+.knowledge-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.knowledge-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.knowledge-card {
+    background: #fff;
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    transition: transform 0.2s ease;
+}
+
+.knowledge-card:hover {
+    transform: translateY(-5px);
+}
+
+.knowledge-icon {
+    font-size: 35px;
+    margin-bottom: 10px;
+}
+
+.knowledge-card h3 {
+    font-size: 21px;
+    margin: 8px 0 12px;
+}
+
+.knowledge-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+.knowledge-card ul {
+    padding-left: 20px;
+    color: #444;
+    line-height: 1.8;
+}
+
+.knowledge-bottom {
+    margin-top: 45px;
+    padding: 35px;
+    text-align: center;
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+}
+
+.knowledge-bottom h2 {
+    margin-top: 0;
+}
+
+.knowledge-bottom p {
+    color: #666;
+    margin-bottom: 22px;
+    line-height: 1.6;
+}
+
+.secondary-btn {
+    margin-left: 10px;
+}
+
+@media (max-width: 900px) {
+    .knowledge-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .knowledge-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .knowledge-header h1 {
+        font-size: 32px;
+    }
+
+    .secondary-btn {
+        margin-left: 0;
+        margin-top: 10px;
+        display: inline-block;
+    }
+}
+/* ============================= */
+/* REPORT FRAUD */
+/* ============================= */
+
+.fraud-section {
+    max-width: 1050px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.fraud-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.fraud-label {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fraud-header h1 {
+    font-size: 40px;
+    margin: 14px 0 10px;
+}
+
+.fraud-header p {
+    color: #666;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.emergency-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 7px 25px rgba(0,0,0,0.08);
+    margin-bottom: 45px;
+}
+
+.emergency-icon {
+    font-size: 42px;
+}
+
+.emergency-card h2 {
+    margin: 0 0 7px;
+}
+
+.emergency-card p {
+    margin: 0;
+    color: #666;
+}
+
+.helpline-btn {
+    margin-left: auto;
+    padding: 13px 22px;
+    background: #dc2626;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.steps-title {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.fraud-steps {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.fraud-step {
+    display: flex;
+    gap: 18px;
+    padding: 25px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+}
+
+.fraud-step > span {
+    min-width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2563eb;
+    color: #fff;
+    border-radius: 50%;
+    font-weight: 700;
+}
+
+.fraud-step h3 {
+    margin: 0 0 8px;
+}
+
+.fraud-step p {
+    color: #555;
+    line-height: 1.6;
+    margin: 0;
+}
+
+.portal-link {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.warning-card {
+    margin-top: 35px;
+    padding: 25px;
+    background: #fff7ed;
+    border-left: 5px solid #f97316;
+    border-radius: 12px;
+}
+
+.warning-card h2 {
+    margin-top: 0;
+}
+
+.warning-card p {
+    color: #7c2d12;
+    line-height: 1.6;
+}
+
+.fraud-bottom {
+    margin-top: 35px;
+    padding: 35px;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 6px 22px rgba(0,0,0,0.07);
+}
+
+.fraud-bottom p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+@media (max-width: 700px) {
+    .fraud-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .emergency-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .helpline-btn {
+        margin-left: 0;
+    }
+
+    .fraud-header h1 {
+        font-size: 32px;
+    }
+}
+/* ============================= */
+/* CHATBOT */
+/* ============================= */
+
+.chatbot-section {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 60px 20px;
+}
+
+.chatbot-header {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.chatbot-label {
+    display: inline-block;
+    padding: 7px 14px;
+    border-radius: 20px;
+    background: #ede9fe;
+    color: #6d28d9;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.chatbot-header h1 {
+    font-size: 38px;
+    margin: 14px 0 10px;
+}
+
+.chatbot-header p {
+    color: #666;
+    font-size: 17px;
+}
+
+.chatbot-box {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+.chatbot-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 25px;
+    border-bottom: 1px solid #eee;
+}
+
+.bot-avatar {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #eff6ff;
+    border-radius: 50%;
+    font-size: 25px;
+}
+
+.chatbot-title h3 {
+    margin: 0 0 4px;
+}
+
+.chatbot-title span {
+    color: #16a34a;
+    font-size: 13px;
+}
+
+.chat-box {
+    height: 390px;
+    overflow-y: auto;
+    padding: 25px;
+    background: #f8fafc;
+}
+
+.bot-message,
+.user-message {
+    max-width: 75%;
+    padding: 13px 16px;
+    margin-bottom: 15px;
+    border-radius: 14px;
+    line-height: 1.6;
+}
+
+.bot-message {
+    background: #fff;
+    margin-right: auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.user-message {
+    background: #2563eb;
+    color: #fff;
+    margin-left: auto;
+}
+
+.quick-questions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 15px 20px;
+    border-top: 1px solid #eee;
+}
+
+.quick-questions button {
+    border: 1px solid #ddd;
+    background: #fff;
+    padding: 9px 13px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.quick-questions button:hover {
+    background: #f1f5f9;
+}
+
+.chat-input-area {
+    display: flex;
+    gap: 10px;
+    padding: 18px 20px;
+    border-top: 1px solid #eee;
+}
+
+.chat-input-area input {
+    flex: 1;
+    padding: 13px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+.chat-input-area input:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.send-btn {
+    border: none;
+    padding: 0 20px;
+    border-radius: 10px;
+    background: #2563eb;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+@media (max-width: 600px) {
+
+    .chatbot-header h1 {
+        font-size: 30px;
+    }
+
+    .chat-box {
+        height: 350px;
+    }
+
+    .bot-message,
+    .user-message {
+        max-width: 85%;
+    }
+
+    .chat-input-area {
+        flex-direction: column;
+    }
+
+    .send-btn {
+        padding: 12px;
+    }
+}
+/* ============================= */
+/* FINAL NAVBAR POLISH */
+/* ============================= */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    padding: 16px 5%;
+}
+
+.navbar .logo {
+    font-size: 24px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.navbar nav a:hover {
+    opacity: 0.7;
+}
+
+@media (max-width: 900px) {
+
+    .navbar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .navbar nav {
+        gap: 8px 12px;
+    }
+
+    .navbar nav a {
+        font-size: 13px;
+    }
+}
+/* ============================= */
+/* ADMIN LOGIN PAGE */
+/* ============================= */
+
+.login-container {
+    min-height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 420px;
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.12);
+    text-align: center;
+}
+
+.login-card h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+    color: #123456;
+}
+
+.login-card p {
+    color: #666;
+    margin-bottom: 28px;
+}
+
+.login-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.login-card input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 14px 16px;
+    border: 1px solid #d5dce5;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+.login-card input:focus {
+    border-color: #1976d2;
+    box-shadow: 0 0 0 3px rgba(25, 118, 210, 0.12);
+}
+
+.login-card button {
+    border: none;
+    padding: 14px;
+    border-radius: 10px;
+    background: #1976d2;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-card button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.login-error {
+    background: #ffe8e8;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+    font-size: 14px;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+    .login-container {
+        padding: 25px 15px;
+    }
+
+    .login-card {
+        padding: 28px 20px;
+    }
+
+    .login-card h1 {
+        font-size: 24px;
+    }
+}
+/* ============================= */
+/* KNOWLEDGE BASE FAQ DESIGN */
+/* ============================= */
+
+.knowledge-page {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+.knowledge-heading h1 {
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+.knowledge-heading p {
+    font-size: 18px;
+    color: #666;
+    line-height: 1.6;
+    max-width: 650px;
+}
+
+
+/* FILTERS */
+
+.knowledge-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 35px 0;
+}
+
+.filter-btn {
+    border: 1px solid #e1e6eb;
+    background: #f5f7f9;
+    padding: 11px 18px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.2s ease;
+}
+
+.filter-btn:hover {
+    background: #e8eef5;
+}
+
+.filter-btn.active {
+    background: #0969b8;
+    color: white;
+    border-color: #0969b8;
+}
+
+
+/* QUESTIONS */
+
+.knowledge-list {
+    margin-top: 20px;
+}
+
+.knowledge-item {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.question {
+    width: 100%;
+    border: none;
+    background: transparent;
+    padding: 25px 5px;
+    text-align: left;
+    font-size: 18px;
+    color: #222;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.question span {
+    font-size: 25px;
+    color: #0969b8;
+    min-width: 25px;
+    text-align: center;
+}
+
+.answer {
+    display: none;
+    padding: 0 45px 22px 5px;
+    color: #666;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+
+/* CTA */
+
+.knowledge-help {
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 18px;
+    background: #f4f8fc;
+    text-align: center;
+}
+
+.knowledge-help h2 {
+    margin-bottom: 8px;
+}
+
+.knowledge-help p {
+    color: #666;
+}
+
+.knowledge-help a {
+    display: inline-block;
+    margin-top: 12px;
+    padding: 12px 22px;
+    border-radius: 8px;
+    background: #0969b8;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+
+    .knowledge-page {
+        margin: 25px auto;
+        padding: 15px;
+    }
+
+    .knowledge-heading h1 {
+        font-size: 32px;
+    }
+
+    .knowledge-heading p {
+        font-size: 16px;
+    }
+
+    .question {
+        font-size: 16px;
+        padding: 20px 2px;
+    }
+
+    .filter-btn {
+        font-size: 13px;
+        padding: 9px 14px;
+    }
+
+}/* ============================= */
+/* CYBER AWARENESS PAGE */
+/* ============================= */
+
+.awareness-page {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 45px 25px;
+}
+
+.awareness-hero {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 45px;
+    margin-bottom: 35px;
+    border-radius: 25px;
+    background: linear-gradient(135deg, #eef7ff, #f8fbff);
+}
+
+.hero-shield {
+    font-size: 75px;
+}
+
+.awareness-hero h1 {
+    font-size: 46px;
+    margin: 0 0 5px;
+}
+
+.awareness-hero .tagline {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 5px 0 15px;
+}
+
+.awareness-hero p {
+    max-width: 700px;
+    color: #555;
+    line-height: 1.7;
+}
+
+
+/* CARDS */
+
+.awareness-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.awareness-card {
+    border-radius: 22px;
+    overflow: hidden;
+    border: 1px solid #e5e9ef;
+    background: white;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 25px;
+}
+
+.card-icon {
+    font-size: 45px;
+}
+
+.card-title h2 {
+    margin: 0;
+    font-size: 25px;
+}
+
+.card-title p {
+    margin: 5px 0 0;
+    color: #666;
+}
+
+
+/* CARD HEADER COLORS */
+
+.kids-card .card-title {
+    background: #fff0f6;
+}
+
+.young-card .card-title {
+    background: #edf7ff;
+}
+
+.senior-card .card-title {
+    background: #effbf4;
+}
+
+
+/* TIPS */
+
+.tips {
+    padding: 8px 22px 18px;
+}
+
+.tip {
+    padding: 13px 5px;
+    border-bottom: 1px solid #eeeeee;
+    color: #4d5965;
+    line-height: 1.45;
+    font-size: 14px;
+}
+
+.tip:last-child {
+    border-bottom: none;
+}
+
+.tip b {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 27px;
+    height: 27px;
+    border-radius: 50%;
+    margin-right: 8px;
+    background: #1677d2;
+    color: white;
+    font-size: 12px;
+}
+
+
+/* BOTTOM */
+
+.awareness-footer {
+    margin-top: 35px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 20px;
+    background: #eef7ff;
+}
+
+.awareness-footer h2 {
+    margin-bottom: 8px;
+}
+
+.awareness-footer p {
+    color: #666;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+
+    .awareness-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .awareness-card {
+        max-width: 700px;
+        margin: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .awareness-page {
+        padding: 25px 15px;
+    }
+
+    .awareness-hero {
+        padding: 25px;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .awareness-hero h1 {
+        font-size: 34px;
+    }
+
+    .hero-shield {
+        font-size: 55px;
+    }
+}
+.awareness-card .card-title img {
+    width: 130px;
+    height: 85px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+@media (max-width: 600px) {
+    .awareness-card .card-title img {
+        width: 100px;
+        height: 70px;
+    }
+}

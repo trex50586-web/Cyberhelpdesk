@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Ask an Expert | CyberShield</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            🛡️ CyberShield
+        </div>
+
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/ask-expert">Ask Expert</a>
+            <a href="/report-fraud">Report Fraud</a>
+            <a href="/scam-alerts">Scam Alerts</a>
+            <a href="/knowledge">Knowledge Hub</a>
+            <a href="/chatbot">Cyber Awarness </a>
+             <a href="/admin">Admin Panel</a>
+            <a href="/my-query">My Query</a>
+        </div>
+
+    </nav>
+
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+
+        <span class="badge">
+            COMMUNITY HELP DESK
+        </span>
+
+        <h1>Ask a Cyber Safety Expert</h1>
+
+        <p>
+            Have a question about phishing, online fraud, UPI scams,
+            fake accounts or any other cyber safety issue?
+            Ask us and get guidance.
+        </p>
+
+    </section>
+
+
+    <!-- ASK FORM -->
+    <section class="ask-section">
+
+        <div class="ask-container">
+
+            <div class="ask-info">
+
+                <div class="feature-icon">
+                    🛡️
+                </div>
+
+                <h2>Need Cyber Safety Help?</h2>
+
+                <p>
+                    Describe your problem clearly. Our helpdesk can
+                    provide guidance on common cyber safety issues.
+                </p>
+
+                <div class="help-point">
+                    ✓ Don't share passwords or OTPs
+                </div>
+
+                <div class="help-point">
+                    ✓ Never share sensitive banking details
+                </div>
+
+                <div class="help-point">
+                    ✓ Don't post private information
+                </div>
+
+            </div>
+
+
+            <div class="question-form">
+
+                <h2>Submit Your Query</h2>
+
+                <form method="POST">
+
+                    <label for="name">
+                        Your Name
+                    </label>
+
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        placeholder="Enter your name"
+                        required
+                    >
+
+
+                    <label for="email">
+                        Email
+                    </label>
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+
+
+                    <label for="category">
+                        Query Category
+                    </label>
+
+                    <select id="category" name="category" required>
+
+                        <option value="">
+                            Select a category
+                        </option>
+
+                        <option value="phishing">
+                            Phishing
+                        </option>
+
+                        <option value="upi">
+                            UPI Fraud
+                        </option>
+
+                        <option value="job">
+                            Job Scam
+                        </option>
+
+                        <option value="social-media">
+                            Social Media
+                        </option>
+
+                        <option value="online-fraud">
+                            Online Fraud
+                        </option>
+
+                        <option value="other">
+                            Other
+                        </option>
+
+                    </select>
+
+
+                    <label for="question">
+                        Your Question
+                    </label>
+
+                    <textarea
+                        id="question"
+                        name="question"
+                        rows="6"
+                        placeholder="Describe your cyber safety problem..."
+                        required
+                    ></textarea>
+
+
+                    <button type="submit"
+                            class="btn primary-btn">
+                        Submit Query
+                    </button>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            🛡️ CyberShield
+        </div>
+
+        <p>
+            Community Helpdesk for Cyber Safety Queries
+        </p>
+
+        <p class="copyright">
+            © 2026 CyberShield. Educational Mini Project.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>

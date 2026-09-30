@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Admin Panel - CyberHelpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">CyberHelpdesk</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/ask-expert">Ask Expert</a>
+        <a href="/report-fraud">Report Fraud</a>
+        <a href="/scam-alerts">Scam Alerts</a>
+        <a href="/knowledge">Knowledge Base</a>
+        <a href="/chatbot">Cyber Awarness</a>
+        <a href="/admin-logout" class="admin-logout">Logout</a>
+    </nav>
+
+</header>
+
+
+<section class="admin-section">
+
+    <div class="admin-header">
+        <h1>🛡️ Admin Panel</h1>
+
+        <p>
+            Manage user cyber safety queries and provide expert responses.
+        </p>
+    </div>
+
+
+    {% if queries %}
+
+        {% for query in queries %}
+
+        <div class="admin-query-card">
+
+            <div class="admin-query-top">
+
+                <div>
+                    <h3>{{ query.category }}</h3>
+
+                    <span class="admin-id">
+                        Query #{{ query.id }}
+                    </span>
+                </div>
+
+                <span class="status-badge
+                    {% if query.status == 'Answered' %}
+                        answered
+                    {% else %}
+                        pending
+                    {% endif %}
+                ">
+                    {{ query.status }}
+                </span>
+
+            </div>
+
+
+            <div class="admin-details">
+
+                <p>
+                    <strong>👤 Name:</strong>
+                    {{ query.name }}
+                </p>
+
+                <p>
+                    <strong>📧 Email:</strong>
+                    {{ query.email }}
+                </p>
+
+                <p>
+                    <strong>❓ Question:</strong>
+                </p>
+
+                <div class="admin-question">
+                    {{ query.question }}
+                </div>
+
+            </div>
+
+
+            {% if query.answer %}
+
+            <div class="existing-answer">
+
+                <h4>✅ Expert Response</h4>
+
+                <p>
+                    {{ query.answer }}
+                </p>
+
+            </div>
+
+            {% else %}
+
+            <form method="POST"
+                  action="/admin/answer/{{ query.id }}"
+                  class="answer-form">
+
+                <label for="answer-{{ query.id }}">
+                    ✍️ Write Expert Answer
+                </label>
+
+                <textarea
+                    id="answer-{{ query.id }}"
+                    name="answer"
+                    rows="5"
+                    placeholder="Write a helpful and clear cyber safety response..."
+                    required
+                ></textarea>
+
+                <button type="submit"
+                        class="btn primary-btn">
+                    Submit Answer
+                </button>
+
+            </form>
+
+            {% endif %}
+
+
+            <small class="query-date">
+                Submitted on: {{ query.created_at }}
+            </small>
+
+        </div>
+
+        {% endfor %}
+
+    {% else %}
+
+        <div class="empty-admin">
+
+            <h3>📭 No Queries Yet</h3>
+
+            <p>
+                User queries will appear here when someone submits
+                a question.
+            </p>
+
+        </div>
+
+    {% endif %}
+
+</section>
+
+
+<footer class="footer">
+
+    <p>
+        © 2026 CyberHelpdesk | Admin Dashboard
+    </p>
+
+</footer>
+
+</body>
+</html>

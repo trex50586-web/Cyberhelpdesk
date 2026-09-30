@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cyber Awareness - CyberHelpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+
+    <div class="logo">🛡️ CyberHelpdesk</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/report-fraud">Report Fraud</a>
+        <a href="/scam-alerts">Scam Alerts</a>
+        <a href="/knowledge">Knowledge</a>
+        <a href="/chatbot">Cyber Awareness</a>
+        <a href="/ask-expert">Ask Expert</a>
+        <a href="/my-query">My Query</a>
+        <a href="/admin">Admin Panel</a>
+    </nav>
+
+</header>
+
+
+<section class="awareness-page">
+
+    <div class="awareness-hero">
+
+        <div class="hero-shield">🛡️</div>
+
+        <div>
+            <h1>Cyber Awareness</h1>
+
+            <p class="tagline">
+                Stay informed. Stay safe. Online.
+            </p>
+
+            <p>
+                Cyber safety is for everyone. Here you'll find simple
+                and practical tips for kids, young people and senior
+                citizens to stay safe in the digital world.
+            </p>
+        </div>
+
+    </div>
+
+
+    <div class="awareness-cards">
+
+
+        <!-- KIDS -->
+
+        <div class="awareness-card kids-card">
+
+            <div class="card-title">
+               <img src="{{ url_for('static', filename='images/kids.png') }}"
+     alt="Kids Cyber Safety">
+
+                <div>
+                    <h2>Kids</h2>
+                    <p>Be safe, be smart, be kind online.</p>
+                </div>
+            </div>
+
+            <div class="tips">
+
+                <div class="tip"><b>1</b> Keep your personal information private.</div>
+                <div class="tip"><b>2</b> Don't talk to strangers online.</div>
+                <div class="tip"><b>3</b> Ask a parent or teacher if something feels wrong.</div>
+                <div class="tip"><b>4</b> Be careful with links and downloads.</div>
+                <div class="tip"><b>5</b> Use strong and unique passwords.</div>
+                <div class="tip"><b>6</b> Think before you post or share.</div>
+                <div class="tip"><b>7</b> Don't reply to mean or harmful messages.</div>
+                <div class="tip"><b>8</b> Keep your games and devices updated.</div>
+                <div class="tip"><b>9</b> Use privacy settings on apps and games.</div>
+                <div class="tip"><b>10</b> Don't share your location publicly.</div>
+                <div class="tip"><b>11</b> Be kind and respectful online.</div>
+                <div class="tip"><b>12</b> Tell a trusted adult about suspicious activity.</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- YOUNG ADULTS -->
+
+        <div class="awareness-card young-card">
+
+            <div class="card-title">
+               <img src="{{ url_for('static', filename='images/young.png') }}"
+     alt="Young Adults Cyber Safety">
+
+                <div>
+                    <h2>Young Adults</h2>
+                    <p>Think. Verify. Stay Cyber Safe.</p>
+                </div>
+            </div>
+
+            <div class="tips">
+
+                <div class="tip"><b>1</b> Be careful with phishing emails and fake links.</div>
+                <div class="tip"><b>2</b> Never share OTP, PIN or banking details.</div>
+                <div class="tip"><b>3</b> Use two-factor authentication (2FA).</div>
+                <div class="tip"><b>4</b> Check social media privacy settings.</div>
+                <div class="tip"><b>5</b> Be careful with fake job and investment offers.</div>
+                <div class="tip"><b>6</b> Check website URLs before entering information.</div>
+                <div class="tip"><b>7</b> Use strong and unique passwords.</div>
+                <div class="tip"><b>8</b> Avoid suspicious downloads and unknown apps.</div>
+                <div class="tip"><b>9</b> Think carefully before sharing personal information.</div>
+                <div class="tip"><b>10</b> Respect others and avoid cyberbullying.</div>
+                <div class="tip"><b>11</b> Keep devices and apps updated.</div>
+                <div class="tip"><b>12</b> Report suspicious online activity.</div>
+
+            </div>
+
+        </div>
+
+
+        <!-- SENIOR CITIZENS -->
+
+        <div class="awareness-card senior-card">
+
+            <div class="card-title">
+                <img src="{{ url_for('static', filename='images/senior.png') }}"
+     alt="Senior Citizens Cyber Safety">
+                <div>
+                    <h2>Senior Citizens</h2>
+                    <p>Stay alert. Stay safe. Stay connected.</p>
+                </div>
+            </div>
+
+            <div class="tips">
+
+                <div class="tip"><b>1</b> Don't share personal or financial information.</div>
+                <div class="tip"><b>2</b> Be careful with calls from unknown people.</div>
+                <div class="tip"><b>3</b> Never share OTP, PIN or passwords.</div>
+                <div class="tip"><b>4</b> Check messages and links before opening them.</div>
+                <div class="tip"><b>5</b> Use trusted and secure websites.</div>
+                <div class="tip"><b>6</b> Keep your phone and apps updated.</div>
+                <div class="tip"><b>7</b> Avoid clicking suspicious advertisements.</div>
+                <div class="tip"><b>8</b> Don't make payments to unknown accounts.</div>
+                <div class="tip"><b>9</b> Ask a trusted family member when unsure.</div>
+                <div class="tip"><b>10</b> Be careful while using social media.</div>
+                <div class="tip"><b>11</b> Keep important data backed up.</div>
+                <div class="tip"><b>12</b> Report cyber fraud quickly through official channels.</div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="awareness-footer">
+
+        <h2>🛡️ A safer internet starts with awareness.</h2>
+
+        <p>
+            Stay informed, share knowledge and help build a safer
+            digital community.
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>

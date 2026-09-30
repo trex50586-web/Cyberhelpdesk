@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Query - CyberHelpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">CyberHelpdesk</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/ask-expert">Ask Expert</a>
+        <a href="/report-fraud">Report Fraud</a>
+        <a href="/scam-alerts">Scam Alerts</a>
+        <a href="/knowledge">Knowledge Base</a>
+        <a href="/chatbot">Cyber Awareness</a>
+        <a href="/my-query">My Query</a>
+        <a href="/admin">Admin Panel</a>
+    </nav>
+</header>
+
+
+<section class="page-section">
+
+    <div class="page-header">
+        <h1>🔎 Check Your Query</h1>
+        <p>
+            Track your cyber safety query and view the expert response.
+        </p>
+    </div>
+
+
+    <div class="query-search-card">
+
+        <form method="POST" action="/my-query">
+
+            <label for="email">Email Address</label>
+
+            <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Enter the email used for your query"
+                required
+            >
+
+            <button type="submit" class="btn primary-btn">
+                Check Query
+            </button>
+
+        </form>
+
+    </div>
+
+
+    {% if queries %}
+
+    <div class="results-section">
+
+        <h2>Your Queries</h2>
+
+        {% for query in queries %}
+
+        <div class="query-card">
+
+            <div class="query-card-header">
+                <h3>{{ query.category }}</h3>
+
+                <span class="status-badge
+                    {% if query.status == 'Answered' %}
+                        answered
+                    {% else %}
+                        pending
+                    {% endif %}
+                ">
+                    {{ query.status }}
+                </span>
+            </div>
+
+
+            <div class="query-content">
+
+                <p>
+                    <strong>Your Question</strong>
+                </p>
+
+                <p class="question-text">
+                    {{ query.question }}
+                </p>
+
+
+                {% if query.answer %}
+
+                <div class="expert-response">
+
+                    <h4>👨‍💻 Expert Response</h4>
+
+                    <p>
+                        {{ query.answer }}
+                    </p>
+
+                </div>
+
+                {% else %}
+
+                <div class="waiting-message">
+
+                    ⏳ Your query is currently waiting for an expert
+                    response.
+
+                </div>
+
+                {% endif %}
+
+
+                <small>
+                    Submitted on: {{ query.created_at }}
+                </small>
+
+            </div>
+
+        </div>
+
+        {% endfor %}
+
+    </div>
+
+    {% elif request.method == "POST" %}
+
+    <div class="no-query">
+
+        <h3>❌ No Query Found</h3>
+
+        <p>
+            We couldn't find any query associated with this email address.
+        </p>
+
+    </div>
+
+    {% endif %}
+
+</section>
+
+
+<footer class="footer">
+
+    <p>
+        © 2026 CyberHelpdesk | Stay Safe Online 🔐
+    </p>
+
+</footer>
+
+</body>
+</html>

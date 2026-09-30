@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Knowledge Base - CyberHelpdesk</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">🛡️ CyberHelpdesk</div>
+
+    <nav>
+        <a href="/">Home</a>
+        <a href="/ask-expert">Ask Expert</a>
+        <a href="/report-fraud">Report Fraud</a>
+        <a href="/scam-alerts">Scam Alerts</a>
+        <a href="/knowledge">Knowledge Base</a>
+        <a href="/chatbot">Cyber Awareness</a>
+        <a href="/my-query">My Query</a>
+        <a href="/admin">Admin Panel</a>
+    </nav>
+</header>
+
+
+<!-- KNOWLEDGE BASE -->
+
+<section class="knowledge-page">
+
+    <div class="knowledge-heading">
+        <h1>Knowledge base</h1>
+
+        <p>
+            Answers to the questions the community asks
+            most often, organised by topic.
+        </p>
+    </div>
+
+
+    <!-- CATEGORY BUTTONS -->
+
+    <div class="knowledge-filters">
+
+        <button class="filter-btn active"
+                onclick="filterKnowledge('all', this)">
+            All
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('phishing', this)">
+            Phishing / Fake calls
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('upi', this)">
+            OTP & UPI fraud
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('password', this)">
+            Password & account safety
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('social', this)">
+            Social media privacy
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('cyberbullying', this)">
+            Cyberbullying / harassment
+        </button>
+
+        <button class="filter-btn"
+                onclick="filterKnowledge('wifi', this)">
+            Device & Wi-Fi safety
+        </button>
+
+    </div>
+
+
+    <!-- QUESTIONS -->
+
+    <div class="knowledge-list">
+
+
+        <!-- PHISHING -->
+
+        <div class="knowledge-item phishing">
+            <button class="question">
+                How do I recognise a phishing message?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Check the sender, spelling, suspicious links and urgent
+                requests for money or personal information. Do not click
+                unknown links.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item phishing">
+            <button class="question">
+                A caller claims to be from the cyber cell — is this normal?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Be careful. Do not share OTP, PIN, password or banking
+                details on a call. Verify the caller through an official
+                source.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item phishing">
+            <button class="question">
+                What should I do if I clicked a suspicious link?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Stop interacting with the website, do not enter more
+                information, change affected passwords and monitor your
+                accounts for unusual activity.
+            </div>
+        </div>
+
+
+        <!-- UPI -->
+
+        <div class="knowledge-item upi">
+            <button class="question">
+                Should I ever share an OTP with anyone?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                No. Never share your OTP with another person, even if they
+                claim to be from a bank, company or government department.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item upi">
+            <button class="question">
+                What is a "collect request" scam on UPI?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                A scammer may send a fake payment request and ask you to
+                approve it. Always check the amount and receiver before
+                approving any UPI request.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item upi">
+            <button class="question">
+                What should I do after a suspicious UPI transaction?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Contact your bank immediately, preserve transaction details
+                and report cyber financial fraud through the official
+                channels, including helpline 1930 in India.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item upi">
+            <button class="question">
+                Can someone take money just by receiving my UPI ID?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                A UPI ID alone should not be treated like a PIN. Never
+                approve an unknown payment request or share your UPI PIN.
+            </div>
+        </div>
+
+
+        <!-- PASSWORD -->
+
+        <div class="knowledge-item password">
+            <button class="question">
+                What makes a password actually strong?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Use a long, unique password or passphrase. Avoid names,
+                birthdays and easily guessed information.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item password">
+            <button class="question">
+                Is it safe to save passwords in the browser?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                A reputable password manager or browser password manager
+                can be useful when protected by a strong device password
+                and other security controls.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item password">
+            <button class="question">
+                Should I use the same password everywhere?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                No. Use different passwords for important accounts so that
+                one compromised password does not expose multiple accounts.
+            </div>
+        </div>
+
+
+        <!-- SOCIAL MEDIA -->
+
+        <div class="knowledge-item social">
+            <button class="question">
+                How do I stop strangers from seeing my posts?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Review your account privacy settings and limit who can see
+                your posts, stories, profile information and contact details.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item social">
+            <button class="question">
+                Someone is impersonating me with a fake profile — what do I do?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Save screenshots and the profile URL, report the fake account
+                through the platform and inform people who may be affected.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item social">
+            <button class="question">
+                Should I share my live location publicly?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Avoid publicly sharing your real-time location. Review location
+                permissions for social media and other apps.
+            </div>
+        </div>
+
+
+        <!-- CYBERBULLYING -->
+
+        <div class="knowledge-item cyberbullying">
+            <button class="question">
+                What should I do if I'm being harassed online?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Do not engage with the harasser. Save evidence, block or
+                report the account and seek help from a trusted person or
+                appropriate authority.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item cyberbullying">
+            <button class="question">
+                Should I delete abusive messages?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Keep screenshots or other evidence before deleting or
+                blocking content, especially if you may need to report it.
+            </div>
+        </div>
+
+
+        <!-- WIFI -->
+
+        <div class="knowledge-item wifi">
+            <button class="question">
+                Is it safe to use public Wi-Fi for banking?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Avoid sensitive banking activity on unknown public networks
+                when possible. Prefer a trusted connection and check that
+                websites use HTTPS.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item wifi">
+            <button class="question">
+                How can I keep my phone safe?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Keep your phone and apps updated, use a screen lock,
+                install apps from trusted sources and review app permissions.
+            </div>
+        </div>
+
+
+        <div class="knowledge-item wifi">
+            <button class="question">
+                Why should I update my apps and operating system?
+                <span>+</span>
+            </button>
+
+            <div class="answer">
+                Updates often include security fixes. Keeping software
+                updated can reduce exposure to known security problems.
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- BOTTOM CTA -->
+
+    <div class="knowledge-help">
+
+        <h2>Still have a question?</h2>
+
+        <p>
+            If you cannot find the answer here, ask our CyberHelpdesk team.
+        </p>
+
+        <a href="/ask-expert">
+            Ask an Expert →
+        </a>
+
+    </div>
+
+</section>
+
+
+<script>
+
+document.querySelectorAll(".question").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const answer = button.nextElementSibling;
+        const icon = button.querySelector("span");
+
+        if (answer.style.display === "block") {
+
+            answer.style.display = "none";
+            icon.textContent = "+";
+
+        } else {
+
+            answer.style.display = "block";
+            icon.textContent = "−";
+
+        }
+
+    });
+
+});
+
+
+function filterKnowledge(category, clickedButton) {
+
+    document.querySelectorAll(".filter-btn").forEach(btn => {
+        btn.classList.remove("active");
+    });
+
+    clickedButton.classList.add("active");
+
+    document.querySelectorAll(".knowledge-item").forEach(item => {
+
+        if (category === "all" ||
+            item.classList.contains(category)) {
+
+            item.style.display = "block";
+
+        } else {
+
+            item.style.display = "none";
+
+        }
+
+    });
+
+}
+
+</script>
+
+</body>
+</html>
